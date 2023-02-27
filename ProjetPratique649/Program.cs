@@ -1,15 +1,9 @@
 ﻿// Variables instanciations
-int[] numbers = new int[50];
-int nbr = 0;
+int[] winNbr = new int[6];
 Random ran = new Random();
 
-nbr = ran.Next(1, 49);
-
-for(int i = 1; i < numbers.Length; i++)
+for(int i = 0; i < winNbr.Length; i++)
     {
-    numbers[i] = i;
-    Console.Write(numbers[i] + " + ");
+        winNbr[i] = ran.Next(1,49);
+        Console.Write(winNbr[i] + " ");
     }
-
-
-Console.WriteLine(nbr);
