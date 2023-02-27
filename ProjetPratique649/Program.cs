@@ -8,7 +8,7 @@ nbr = ran.Next(1, 49);
 for(int i = 1; i < numbers.Length; i++)
     {
     numbers[i] = i;
-    Console.Write(numbers[i] + " ");
+    Console.Write(numbers[i] + "penis");
     }
 
 
