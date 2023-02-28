@@ -1,14 +1,28 @@
 ﻿// Variables instanciations
+using ProjetPratique649;
+
 int[] winNbr = new int[6];
 int[] chosenNbr = new int[6];
-Random ran = new Random();
+int nbr = 0;
 
-// Asking for user numbers and making sure they are right.
+// Asking for user numbers
 
 for (int i = 0; i < chosenNbr.Length; i++)
 {
-    Console.WriteLine("Please pick your numbers " + (i + 1) + "/6");
-    chosenNbr[i] = Convert.ToInt32(Console.ReadLine());
+    do
+    {
+        Console.WriteLine("Please pick your numbers " + (i + 1) + "/6");
+        nbr = Functions.ReadNBR(chosenNbr, i);
+        if (nbr < 1 || nbr > 49)
+        {
+            Console.WriteLine("Your number must be between 1 and 49 inclusively.");
+        }
+        else
+        {
+            i++;
+        }
+    }
+    while (i < 6);
 }
 
 Console.WriteLine("Your numbers are ");
@@ -21,8 +35,5 @@ Console.WriteLine();
 // Displaying winning numbers
 
 Console.WriteLine("The winning numbers are : ");
-for(int i = 0; i < winNbr.Length; i++)
-{
-    winNbr[i] = ran.Next(1,49);
-    Console.Write(winNbr[i] + " ");
-}
+Functions.GenerateNBR(winNbr);
+Console.ReadLine();
