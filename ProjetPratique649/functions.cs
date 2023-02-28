@@ -14,16 +14,19 @@ namespace ProjetPratique649
             return myArray[i];
         }
 
-        public static int GenerateNBR(int[] myArray)
-        {
-            Random ran = new Random();
-            for (int i = 0; i < myArray.Length; i++)
-            {
-                myArray[i] = ran.Next(1, 49);
-                Console.Write(myArray[i] + " ");
-            }
-            return myArray[5];
-        }
+        //public static int GenerateUnique(int[] myArray, int a)
+        //{
+        //    HashSet<int> uniqueSet = new HashSet<int>();
+        //    Random random = new Random();
+
+        //    while (uniqueSet.Count < 6)
+        //    {
+        //        int number = random.Next(1, 49);
+        //        uniqueSet.Add(number);
+        //    }
+        //    uniqueSet.CopyTo(myArray);
+        //    return myArray[a];
+        //}
     }
 
 }
